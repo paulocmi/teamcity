@@ -1,0 +1,227 @@
+{
+	"variables": [],
+	"info": {
+		"name": "00_TeamCity",
+		"_postman_id": "a466c485-1cc4-bc7c-3989-0d00c8c38ba4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01_Asset",
+			"description": "",
+			"item": [
+				{
+					"name": "TC_00_01_01 - Access Google Page 200 Assets",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"assertModule\"));\r",
+									"\r",
+									"test.assertStatusCode(400);\r",
+									"\r",
+									"\r",
+									"try {\r",
+									"    errorObject = JSON.parse(responseBody);\r",
+									"\r",
+									"    var expectedError ={\"error\":\"invalid_request\",\"error_description\":\"Invalid request.\",\"error_details\":[\"\\\"Name\\\" from \\\"CreateAssetContract\\\" is required.\",\"\\\"AssetType\\\" from \\\"CreateAssetContract\\\" is required.\"],\"app_errors\":[{\"error_code\":\"ValidationRequired\",\"parameter_name\":\"Name\"},{\"error_code\":\"ValidationRequired\",\"parameter_name\":\"AssetType\"}]}\r",
+									"\r",
+									"    test.assertMatchObject(\"Error object must be equal as expected.\", expectedError, errorObject, null, null);\r",
+									"\r",
+									"} catch (e) {\r",
+									"    test.assertFailTest(\"Response object does not have the expected fields\", null, null);\r",
+									"}\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{host}}/{{env}}/api/Organization/assets",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "OAuth2 {{ENV_ACCESS_TOKEN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"description": "Get DM Access Token to be used in Asset's tests."
+					},
+					"response": []
+				},
+				{
+					"name": "TC_00_01_02 - Access Google Page 400 Assets",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"assertModule\"));\r",
+									"\r",
+									"test.assertStatusCode(400);\r",
+									"\r",
+									"\r",
+									"try {\r",
+									"    errorObject = JSON.parse(responseBody);\r",
+									"\r",
+									"    var expectedError ={\"error\":\"invalid_request\",\"error_description\":\"Invalid request.\",\"error_details\":[\"\\\"Name\\\" from \\\"CreateAssetContract\\\" is required.\",\"\\\"AssetType\\\" from \\\"CreateAssetContract\\\" is required.\"],\"app_errors\":[{\"error_code\":\"ValidationRequired\",\"parameter_name\":\"Name\"},{\"error_code\":\"ValidationRequired\",\"parameter_name\":\"AssetType\"}]}\r",
+									"\r",
+									"    test.assertMatchObject(\"Error object must be equal as expected.\", expectedError, errorObject, null, null);\r",
+									"\r",
+									"} catch (e) {\r",
+									"    test.assertFailTest(\"Response object does not have the expected fields\", null, null);\r",
+									"}\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{host}}/{{env}}/api/Organization/assets",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "OAuth2 {{ENV_ACCESS_TOKEN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"description": "Get DM Access Token to be used in Asset's tests."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "02_Perimeters",
+			"description": "",
+			"item": [
+				{
+					"name": "TC_00_02_01 - Access Google Page 200 Perimeters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"assertModule\"));\r",
+									"\r",
+									"test.assertStatusCode(400);\r",
+									"\r",
+									"\r",
+									"try {\r",
+									"    errorObject = JSON.parse(responseBody);\r",
+									"\r",
+									"    var expectedError ={\"error\":\"invalid_request\",\"error_description\":\"Invalid request.\",\"error_details\":[\"\\\"Name\\\" from \\\"CreateAssetContract\\\" is required.\",\"\\\"AssetType\\\" from \\\"CreateAssetContract\\\" is required.\"],\"app_errors\":[{\"error_code\":\"ValidationRequired\",\"parameter_name\":\"Name\"},{\"error_code\":\"ValidationRequired\",\"parameter_name\":\"AssetType\"}]}\r",
+									"\r",
+									"    test.assertMatchObject(\"Error object must be equal as expected.\", expectedError, errorObject, null, null);\r",
+									"\r",
+									"} catch (e) {\r",
+									"    test.assertFailTest(\"Response object does not have the expected fields\", null, null);\r",
+									"}\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{host}}/{{env}}/api/Organization/assets",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "OAuth2 {{ENV_ACCESS_TOKEN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"description": "Get DM Access Token to be used in Asset's tests."
+					},
+					"response": []
+				},
+				{
+					"name": "TC_00_02_02 - Access Google Page 400 Perimeters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"assertModule\"));\r",
+									"\r",
+									"test.assertStatusCode(400);\r",
+									"\r",
+									"\r",
+									"try {\r",
+									"    errorObject = JSON.parse(responseBody);\r",
+									"\r",
+									"    var expectedError ={\"error\":\"invalid_request\",\"error_description\":\"Invalid request.\",\"error_details\":[\"\\\"Name\\\" from \\\"CreateAssetContract\\\" is required.\",\"\\\"AssetType\\\" from \\\"CreateAssetContract\\\" is required.\"],\"app_errors\":[{\"error_code\":\"ValidationRequired\",\"parameter_name\":\"Name\"},{\"error_code\":\"ValidationRequired\",\"parameter_name\":\"AssetType\"}]}\r",
+									"\r",
+									"    test.assertMatchObject(\"Error object must be equal as expected.\", expectedError, errorObject, null, null);\r",
+									"\r",
+									"} catch (e) {\r",
+									"    test.assertFailTest(\"Response object does not have the expected fields\", null, null);\r",
+									"}\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{host}}/{{env}}/api/Organization/assets",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "OAuth2 {{ENV_ACCESS_TOKEN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"description": "Get DM Access Token to be used in Asset's tests."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
