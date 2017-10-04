@@ -19,7 +19,5 @@ function Exec
 }
 
 Exec { npm install -g newman }
-Exec { npm install newman }
 Exec { npm install -g newman-reporter-teamcity }
-Exec { npm install newman-reporter-teamcity }
 Exec { newman run tests/00_TeamCity.postman_collection -g environments/globals.postman_globals.json -r cli`,teamcity --disable-unicode --no-color }
